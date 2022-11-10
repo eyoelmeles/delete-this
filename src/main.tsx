@@ -43,7 +43,6 @@ const router = createBrowserRouter([
 			{
 				path: "/user/create",
 				element: <CreateUser />,
-				loader: rootLoader,
 				action: createAction,
 			},
 		]

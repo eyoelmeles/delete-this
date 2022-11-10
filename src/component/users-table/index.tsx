@@ -66,7 +66,7 @@ export default function UsersTable({ users }) {
 	const rows = users.map(user => createData(user.fullname, user.username, user.email, user.phoneno));
 
   const [page, setPage] = React.useState(0);
-  const [rowsPerPage, setRowsPerPage] = React.useState(10);
+  const [rowsPerPage, setRowsPerPage] = React.useState(3);
 
   const handleChangePage = (event: unknown, newPage: number) => {
     setPage(newPage);
@@ -82,14 +82,14 @@ export default function UsersTable({ users }) {
       <TableContainer sx={{ maxHeight: 440 }}>
         <Table stickyHeader aria-label="sticky table">
           <TableHead>
-            {/* <TableRow>
+            <TableRow>
               <TableCell align="center" colSpan={2}>
-                Country
+                Name
               </TableCell>
               <TableCell align="center" colSpan={3}>
-                Details
+                Info
               </TableCell>
-            </TableRow> */}
+            </TableRow>
             <TableRow>
               {columns.map((column) => (
                 <TableCell
