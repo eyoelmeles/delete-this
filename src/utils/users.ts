@@ -95,7 +95,7 @@ export async function createUser(newUserData: CreateUser) {
 			enabled: true,
 			fullname: newUserData.fullName,
 			// passwordhash: {},
-			passwordhash: newUserData.password.toString(),
+			passwordhash: newUserData.password.toString(), // should be hashed
 			phoneno: newUserData.phoneNo,
 			publicKey: null,
 			time: Date.now(),
